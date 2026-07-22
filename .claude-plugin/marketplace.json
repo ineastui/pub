@@ -1,0 +1,13 @@
+{
+  "name": "publishing-tools",
+  "owner": {
+    "name": "퍼블리싱팀"
+  },
+  "plugins": [
+    {
+      "name": "pub",
+      "source": "./pub",
+      "description": "피그마 프레임을 정적 HTML/CSS 퍼블리싱 코드로 변환하는 스킬 모음. pub(웹/기본 버전 생성)과 pub-responsive(태블릿/모바일 반응형 오버라이드 전담) 두 스킬 포함."
+    }
+  ]
+}
