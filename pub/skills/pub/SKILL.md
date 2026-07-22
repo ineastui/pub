@@ -6,7 +6,7 @@ argument-hint: [피그마 프레임 링크]
 
 # 피그마 → 퍼블리싱 코드 생성 (웹/기본 버전)
 
-> 스킬 버전: 1.5.0 — 이 줄의 버전 번호가 최신인지 확인하세요. 다른 대화창/세션에서 작업한 버전과 다르면 아직 동기화가 안 된 것입니다.
+> 스킬 버전: 1.6.0 — 이 줄의 버전 번호가 최신인지 확인하세요. 다른 대화창/세션에서 작업한 버전과 다르면 아직 동기화가 안 된 것입니다.
 
 **이 스킬은 웹(기본) 버전을 만드는 것까지만 담당한다. 태블릿/모바일 반응형은 `pub-responsive` 절차로 넘긴다.** 작업 시작 시 1-4에서 일반/반응형을 먼저 명확히 구분하고, 반응형이면 사용자가 별도 명령을 입력할 필요 없이 이 흐름 그대로 `pub-responsive`의 절차로 자동 이어간다.
 
@@ -100,7 +100,7 @@ argument-hint: [피그마 프레임 링크]
 5. **클래스 네이밍**: kebab-case + BEM, 블록명 앞에 컴포넌트/페이지 접두사 필수(`.tag`, `.input` 같은 일반명 금지). 기존 무접두사 클래스 전체 리네이밍은 임의로 안 하고 규칙 12에 따라 확인. **아이콘 버튼**은 매번 `display:flex;align-items:center;justify-content:center;` + svg `width`/`height` 명시.
 6. **색상/폰트/사이즈**: 하드코딩 금지, `var(--...)`만 참조, 없으면 layout.css에 추가.
 7. **스타일 작성 위치**: `layout.css`/`design.css`에만 작성, HTML에 `<style>`/`style=""` 절대 금지.
-8. **리셋 범위 검증**: `<p>`,`h1~h6`,`ul/ol/li`,`button`,`fieldset/legend`,`input/select/textarea`,`figure` 등 브라우저 기본 여백/테두리가 layout.css 리셋에 커버되는지 확인, 없으면 추가.
+8. **리셋 범위 검증**: `<p>`,`h1~h6`,`ul/ol/li`,`button`,`fieldset/legend`,`input/select/textarea`,`figure`,`hr`(기본 margin 있음, `border:0` 처리하면서 `margin:0`도 같이 빠뜨리기 쉬움) 등 브라우저 기본 여백/테두리가 layout.css 리셋에 커버되는지 확인, 없으면 추가.
    - **`box-sizing: border-box` 전역 적용(필수)**: `*, *::before, *::after { box-sizing: border-box; }`가 layout.css에 있는지 확인, 없으면 추가.
 9. **웹표준 준수**: `zoom` 등 비표준/레거시 속성, 벤더 핵 금지. Flexbox/Grid/`%`/`aspect-ratio`/`clamp()` 등 표준 CSS로 구현.
 10. **긴 텍스트/실제 데이터 대비**: 고정 너비/줄수 텍스트 영역엔 오버플로우 처리 기본 적용 — 한 줄은 `overflow:hidden;text-overflow:ellipsis;white-space:nowrap;`, 여러 줄은 `-webkit-line-clamp:N` 방식. 배지/태그처럼 짧고 고정된 값은 생략 가능, 애매하면 규칙 12.
