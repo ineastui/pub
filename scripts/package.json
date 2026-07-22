@@ -1,0 +1,16 @@
+{
+  "name": "pub-visual-diff",
+  "version": "1.0.0",
+  "description": "figma-section-publisher(pub) 스킬의 픽셀 단위 검증 도구 — 생성된 HTML을 스크린샷 찍어 피그마 원본과 비교",
+  "main": "capture.js",
+  "scripts": {
+    "capture": "node capture.js",
+    "diff": "node diff.js",
+    "postinstall": "playwright install chromium"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.61.1",
+    "pngjs": "^7.0.0"
+  }
+}
