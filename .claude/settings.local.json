@@ -17,7 +17,8 @@
       "Bash(git status *)",
       "Bash(git restore *)",
       "mcp__plugin_figma_figma__get_design_context",
-      "mcp__plugin_figma_figma__get_metadata"
+      "mcp__plugin_figma_figma__get_metadata",
+      "Bash(git commit *)"
     ]
   }
 }
