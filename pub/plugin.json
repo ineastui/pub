@@ -1,5 +1,5 @@
 {
   "name": "pub",
   "description": "피그마 프레임을 정적 HTML/CSS 퍼블리싱 코드로 변환하는 스킬 모음 (pub + pub-responsive)",
-  "version": "2.6.0"
+  "version": "2.7.0"
 }
