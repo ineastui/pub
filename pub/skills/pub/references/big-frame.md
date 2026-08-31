@@ -1,5 +1,7 @@
 # 큰 프레임 쪼개서 조회하기
 
+> 이 파일의 "규칙 N", "N번"은 `pub` 스킬 `SKILL.md`의 번호를 가리킨다.
+
 `get_design_context` 응답에 "design was too large… sparse metadata response" 경고가 붙었을 때만 읽는다.
 
    - **"프레임이 너무 커서 뼈대만 반환됐다"는 경고를 절대 무시하지 않는다(필수).** `get_design_context` 응답 끝에 "design was too large... sparse metadata response... call get_design_context on the IDs of the sublayers" 같은 경고가 붙어 있으면, 그 응답엔 색상/폰트/정확한 스타일 정보가 없고 **구조와 좌표만 있는 뼈대**라는 뜻이다. 이 상태로 절대 진행하지 않는다. 사용자가 준 링크가 페이지 전체 같은 거대한 프레임을 가리킬 때 이런 일이 생긴다.
